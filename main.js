@@ -4,7 +4,6 @@ let lastUrl = window.location.pathname
 const addButtonToSongs = async () => {
 
     if (lastUrl !== window.location.pathname){
-        console.log("aaaaaaaaaaaaaaaaaaaaaaaa")
         isUsed = false
     }
 

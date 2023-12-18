@@ -1,0 +1,30 @@
+{
+ "manifest_version": 2,
+ "name": "DeezerScrapper",
+ "description": "Cette extension permet de récupérer efficacement le track ID d'une musique sur deezer.",
+ "author": "Teyir",
+ "version": "1.0",
+ "permissions": [
+  "http://*/*",
+  "https://*/*",
+  "activeTab",
+  "scripting",
+  "tabs"
+ ],
+ "browser_action": {
+  "default_icon" : "img/icon.png"
+ },
+ "icons": {
+  "128" : "img/icon.png"
+ },
+  "content_scripts": [
+    {
+      "matches": ["*://www.deezer.com/*"],
+      "js": ["main.js"]
+    }
+  ],
+ "background": {
+  "scripts": ["main.js"],
+  "persistent": false
+ }
+}
